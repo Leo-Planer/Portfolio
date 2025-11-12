@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Week 10 Day 5 - Frontend Project",
+    "slug": "week10-day5-frontend",
+    "description": "Advanced frontend project showcasing modern React patterns and responsive design.",
+    "longDescription": "A comprehensive frontend application built with Next.js and React, demonstrating advanced concepts including state management, API integration, and responsive UI design with modern best practices.",
+    "image": "/projects/week10-day5-thumb.jpg",
+    "images": ["/projects/week10-day5-1.jpg", "/projects/week10-day5-2.jpg"],
+    "demoUrl": "https://abdullah-week10-day5-frontend.vercel.app/",
+    "repoUrl": "https://github.com/Leo-Planer/week10-day5-frontend",
+    "tags": ["Next.js", "React", "TypeScript", "Responsive Design"],
+    "featured": true,
+    "techStack": ["Next.js", "React", "TypeScript", "CSS3", "Vercel"],
+    "problem": "Create a modern, responsive frontend application demonstrating proficiency in React and Next.js.",
+    "solution": "Built a feature-rich web application with clean code architecture and optimal performance.",
+    "lessonsLearned": [
+      "Advanced React patterns and hooks",
+      "Responsive design implementation",
+      "Performance optimization techniques"
+    ],
+    "year": 2024
+  },
+  {
+    "id": "2",
+    "title": "Week 10 Day 3 - Frontend Project",
+    "slug": "week10-day3-frontend",
+    "description": "Interactive web application with modern UI components and seamless user experience.",
+    "longDescription": "A dynamic frontend project focusing on creating interactive user interfaces with React and implementing modern design patterns for enhanced user experience.",
+    "image": "/projects/week10-day3-thumb.jpg",
+    "images": ["/projects/week10-day3-1.jpg", "/projects/week10-day3-2.jpg"],
+    "demoUrl": "https://abdullah-week10-day3-frontend.vercel.app/",
+    "repoUrl": "https://github.com/Leo-Planer/week10-day3-frontend",
+    "tags": ["React", "JavaScript", "CSS", "UI/UX"],
+    "featured": true,
+    "techStack": ["React", "JavaScript", "CSS3", "HTML5", "Vercel"],
+    "problem": "Develop an interactive web interface with smooth user interactions and modern design.",
+    "solution": "Created a responsive application with intuitive UI components and optimized performance.",
+    "lessonsLearned": [
+      "Component composition in React",
+      "State management strategies",
+      "Modern CSS techniques"
+    ],
+    "year": 2024
+  },
+  {
+    "id": "3",
+    "title": "Week 12 Day 5 - Full Stack Project",
+    "slug": "week12-day5-fullstack",
+    "description": "Full-stack application demonstrating backend integration and data management.",
+    "longDescription": "A complete full-stack application built with modern technologies, featuring both frontend and backend components with database integration and API development.",
+    "image": "/projects/week12-day5-thumb.jpg",
+    "images": ["/projects/week12-day5-1.jpg", "/projects/week12-day5-2.jpg"],
+    "demoUrl": "https://abdullah-week12-day5.vercel.app/",
+    "repoUrl": "https://github.com/Leo-Planer/week12-day5",
+    "tags": ["Next.js", "Full Stack", "API", "Database"],
+    "featured": true,
+    "techStack": ["Next.js", "React", "Node.js", "API Development", "Vercel"],
+    "problem": "Build a complete full-stack solution with frontend, backend, and data persistence.",
+    "solution": "Developed an end-to-end application with RESTful APIs and modern frontend architecture.",
+    "lessonsLearned": [
+      "Full-stack application architecture",
+      "API design and implementation",
+      "Database integration and management"
+    ],
+    "year": 2024
+  },
+  {
+    "id": "4",
+    "title": "Week 6 - Frontend Foundation",
+    "slug": "week6-frontend",
+    "description": "Foundational frontend project focusing on core web development skills.",
+    "longDescription": "An early-stage frontend project demonstrating proficiency in fundamental web technologies including HTML, CSS, and JavaScript with modern development practices.",
+    "image": "/projects/week6-thumb.jpg",
+    "images": ["/projects/week6-1.jpg"],
+    "demoUrl": "https://abdullah-week6-frontend.vercel.app/",
+    "repoUrl": "https://github.com/Leo-Planer/week6-frontend",
+    "tags": ["HTML", "CSS", "JavaScript", "Responsive"],
+    "featured": false,
+    "techStack": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Vercel"],
+    "problem": "Master fundamental web development concepts and create a responsive website.",
+    "solution": "Built a clean, responsive website demonstrating core frontend development skills.",
+    "lessonsLearned": [
+      "HTML semantic structure",
+      "CSS layout techniques",
+      "JavaScript fundamentals"
+    ],
+    "year": 2024
+  }
+]
