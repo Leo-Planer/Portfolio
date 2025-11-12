@@ -1,0 +1,225 @@
+1) Project summary / purpose
+
+Build a modern, production-ready personal portfolio website that showcases projects, technical skills, and contact methods. The site must be developer-focused (clear technical signals), visually polished, accessible, and lightweight. It should be simple for the owner to update project entries and deploy to a typical hosting pipeline (Vercel / Netlify / Cloud provider).
+
+2) Target audience & success metrics
+
+Primary audience: hiring managers, technical interviewers, engineering peers, and potential clients.
+
+Key impressions to deliver: competence with modern stacks, attention to detail, performance awareness, accessible UI.
+
+Success criteria (measurable in acceptance tests): semantic structure, Lighthouse performance ≥ target (see Acceptance Criteria), WCAG AA accessibility, fast first meaningful paint on mobile, project pages with live/demo and repo links.
+
+3) Tech stack & architecture (required)
+
+Primary stack (preferred):
+
+Next.js 15 with TypeScript (app router or pages can be used but indicate which in the repo).
+
+Material UI (MUI) for components and theming (v5+), combined with Tailwind CSS for layout and utility classes. Use MUI for core components and Tailwind for layout spacing & small utilities.
+
+Framer Motion for animations.
+
+ESLint + Prettier with a standard config.
+
+Vitest / Jest + React Testing Library for unit tests (small set of tests required).
+
+Data source: projects stored as MDX or a versioned JSON file in the repo; optionally support Sanity / Contentful or GitHub Actions to sync.
+
+Deployment: Vercel recommended. CI via GitHub Actions (lint/test/build).
+
+If implementer prefers an alternate stack (Remix, Astro, or SSG-only), keep the same accessibility and performance targets.
+
+4) Visual and interaction design guidelines
+
+Visual tone: modern minimalism, slightly technical. Clean typography, clear spacing, restrained color accents for primary brand color.
+
+Layout: mobile-first responsive layout. Desktop: multi-column grid for projects; mobile: stacked single-column.
+
+Colors: produce a light and dark theme. Provide CSS variables or MUI theme tokens for primary/secondary/background/surface/error. Keep contrast ratios meeting WCAG AA.
+
+Typography: system stack + variable font (Inter or Roboto). Scale headings with modular scale (H1 → H2 → H3).
+
+Motion: subtle, purposeful — components should animate on enter/hover (Framer Motion). Avoid large motion that causes motion sickness; respect prefers-reduced-motion.
+
+Micro-interactions: hover states for project cards, focus states for interactive elements, transition for theme toggle.
+
+5) Pages, components and content requirements
+Core pages
+
+Home / Landing — Hero (name, role, short tagline, CTA to projects and contact), one-line summary of skills, highlighted project carousel/tiles, latest blog or technical note (optional).
+
+Projects — grid/list of projects with filters (by tech tag) and search. Each project card: screenshot, title, short blurb (2–3 lines), tech tags, links to demo & source, stack summary, and “View details” CTA.
+
+Project detail page — full description, problem solved, technical approach, key screenshots, architecture diagram (optional), lessons learned, links.
+
+About — short bio, skill matrix (icons + proficiency), resume download link, contact points.
+
+Contact — contact form (serverless submit or integration like Resend/EmailJS) and social links.
+
+404 — polished custom 404 with a CTA back to home.
+
+Privacy / Terms — minimal page if form or analytics used.
+
+Reusable components
+
+Navbar with theme toggle and compact mobile menu (hamburger with accessible ARIA).
+
+Footer with social links and copy.
+
+ProjectCard (MUI Card + Tailwind layout) with keyboard focus states.
+
+Tag / Chip component (MUI Chip styled).
+
+Modal or Drawer for mobile project preview.
+
+Icon set: use MUI icons and custom SVGs for logos or hero illustration.
+
+Image component: Next/Image or equivalent responsive image loader with AVIF/WebP support.
+
+6) UX details & interactions
+
+Keyboard navigable site. All interactive elements reachable by Tab. Visible focus outline.
+
+Theme toggle persists in localStorage and respects OS preference on first load.
+
+Project filter should be accessible and usable with keyboard and screen readers.
+
+Contact form: validate client-side & server-side; show success and error states. Implement rate-limiting or honeypot for spam mitigation.
+
+Prefetch project pages on hover for fast transitions (Next.js prefetch).
+
+7) Accessibility and SEO
+
+Semantic HTML and landmarks: header, main, nav, footer, article.
+
+Alt text for every image; descriptive labels for form elements.
+
+ARIA attributes where needed (aria-expanded, aria-controls, role for non-semantic interactive items).
+
+Color contrast meets WCAG AA for normal text and UI controls.
+
+Structured data (JSON-LD) for person and projects: include name, role, social links, and project metadata on project pages.
+
+Meta tags for each page (title, description, open graph tags, Twitter card).
+
+Sitemap.xml and robots.txt in repo.
+
+Server-side rendering for pages where SEO matters (home, projects, project detail).
+
+8) Performance & optimization
+
+Code-splitting and route-based chunking.
+
+Use responsive images with srcset or Next/Image. Serve modern formats (AVIF/WebP).
+
+Avoid large JS bundles; limit third-party scripts.
+
+Defer non-critical CSS and inline critical above-the-fold styling if needed.
+
+Lighthouse targets: Performance | Accessibility | Best Practices | SEO — include target thresholds as acceptance criteria below.
+
+9) Developer experience, code quality & repo structure (suggested)
+
+Monorepo not necessary. Keep single repo with clear scripts.
+
+Branching: main protected, PRs for features with CI checks.
+
+README: setup, run, build, deploy instructions, content edit instructions.
+
+Linters and formatters run in pre-commit hooks (husky + lint-staged).
+
+Suggested folder layout:
+
+/src
+  /app or /pages
+  /components
+    /ui
+    /layout
+    /projects
+  /lib
+    analytics.ts
+    mail.ts
+  /styles
+  /data
+    projects.json or projects/*.mdx
+/public
+  /images
+  favicon.ico
+tailwind.config.ts
+next.config.js
+tsconfig.json
+package.json
+README.md
+
+10) Tests and QA
+
+Unit tests: key presentational components (ProjectCard, Tag, theme toggle).
+
+End-to-end smoke (optional): visit home, open project, submit contact form (can be mocked).
+
+Accessibility audit: axe-core or Lighthouse programmatic check in CI.
+
+Visual regression: optional (Chromatic or Playwright snapshots).
+
+11) CI/CD & deployment
+
+GitHub Actions workflow:
+
+On PR: run npm ci, npm run lint, npm run test.
+
+On merge to main: build and deploy to Vercel (or run npm run build and upload).
+
+Environment variables documented in README (for email provider, analytics keys).
+
+12) Analytics & observability
+
+Optional: lightweight analytics (Plausible, Umami, or Vercel Analytics). Avoid heavy trackers.
+
+Error reporting: Sentry or Vercel logs only if needed.
+
+Privacy-friendly default (do not enable analytics by default; require opt-in).
+
+13) Content and assets (what you must provide)
+
+High-quality profile photo (square & medium resolution).
+
+Project images/screenshots or animated GIFs (desktop + mobile).
+
+Short portfolio headline (1 line) and a 2–3 paragraph bio.
+
+For each project: title, URL (demo), repo link, 2–3 sentence summary, tech tags, at least one screenshot.
+
+Resume PDF for a download link.
+
+Social links (GitHub, LinkedIn, Twitter / X, Dribbble if design).
+
+14) Deliverables (what to expect)
+
+Complete repo with working site and build scripts.
+
+README with setup and deploy instructions.
+
+Small test-suite and CI workflow file.
+
+A minimal admin content workflow (how to add/edit projects).
+
+Deployed public URL on Vercel (or deployment instructions if deploy access not available).
+
+Design tokens / MUI theme file and Tailwind config.
+
+15) Acceptance criteria (hard checks)
+
+All pages render server-side or statically with correct meta tags.
+
+Site passes accessibility checks: no axe critical violations and WCAG AA contrast on text.
+
+Lighthouse: Accessibility and Best Practices ≥ 90; SEO ≥ 90; Performance target is high but acceptable lower bound should be stated in the PR description for reviewers to judge (aim for 80+ on desktop; mobile may vary).
+
+All interactive elements keyboard operable and focus visible.
+
+Contact form submits and returns success with a mocked endpoint in staging.
+
+Projects data editable as a file (MDX/JSON) and reflected on build without code changes.
+
+README includes exactly these commands: npm install, npm run dev, npm run build, npm run start, npm run lint, npm run test.
