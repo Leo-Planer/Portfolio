@@ -1,0 +1,2 @@
+// Placeholder - Add your resume PDF here
+// The file should be named resume.pdf
