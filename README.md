@@ -1,1 +1,1 @@
-This is Abdullah Jabbar's Portfolio website.
+This is Abdullah Jabbar's Portfolio website. For Hiring Officials and Clients.
