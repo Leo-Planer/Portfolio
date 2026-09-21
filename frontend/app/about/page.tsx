@@ -14,7 +14,8 @@ import ContactButton from '@/components/ui/ContactButton';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about my skills, experience, and background as a full stack web engineer.',
+  description:
+    'Learn more about my skills, experience, and background as a full stack web engineer.',
 };
 
 const skills = [
@@ -67,7 +68,8 @@ export default function AboutPage() {
           About Me
         </Typography>
         <Typography variant="h6" color="text.secondary" sx={{ maxWidth: '700px', mx: 'auto' }}>
-          Passionate full stack web engineer with a focus on building exceptional digital experiences
+          Passionate full stack web engineer with a focus on building exceptional digital
+          experiences
         </Typography>
       </Box>
 
@@ -85,8 +87,8 @@ export default function AboutPage() {
             Hello! I&apos;m Abdullah Jabbar
           </Typography>
           <Typography variant="body1" paragraph>
-            I&apos;m a full stack web engineer based in Pakistan, specializing in building modern web
-            applications with React, Next.js, and Node.js. I am passionate about creating
+            I&apos;m a full stack web engineer based in Pakistan, specializing in building modern
+            web applications with React, Next.js, and Node.js. I am passionate about creating
             exceptional digital experiences and have completed multiple projects demonstrating my
             skills in frontend and full-stack development.
           </Typography>

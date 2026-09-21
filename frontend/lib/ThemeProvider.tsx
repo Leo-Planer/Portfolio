@@ -35,7 +35,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
-    () => false,
+    () => false
   );
 
   const toggleTheme = () => {

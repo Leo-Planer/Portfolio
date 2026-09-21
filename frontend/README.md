@@ -24,17 +24,20 @@ A modern, production-ready personal portfolio website built with Next.js 15, Typ
 ## 🛠️ Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/portfolio.git
 cd portfolio/frontend
 ```
 
 2. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 3. Create a `.env.local` file (optional, for email service):
+
 ```env
 RESEND_API_KEY=your_resend_api_key_here
 ```
@@ -42,27 +45,33 @@ RESEND_API_KEY=your_resend_api_key_here
 ## 🏃‍♂️ Running the Project
 
 ### Development Mode
+
 ```bash
 pnpm run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### Production Build
+
 ```bash
 pnpm run build
 ```
 
 ### Start Production Server
+
 ```bash
 pnpm run start
 ```
 
 ### Run Linter
+
 ```bash
 pnpm run lint
 ```
 
 ### Run Tests
+
 ```bash
 pnpm run test
 ```

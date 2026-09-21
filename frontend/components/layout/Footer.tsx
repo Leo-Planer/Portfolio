@@ -13,7 +13,11 @@ import EmailIcon from '@mui/icons-material/Email';
 const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/Leo-Planer', icon: GitHubIcon },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/leo-planer', icon: LinkedInIcon },
-  { name: 'Upwork', url: 'https://www.upwork.com/freelancers/~01b09490f0736f78e4?mp_source=share', icon: WorkOutlineIcon },
+  {
+    name: 'Upwork',
+    url: 'https://www.upwork.com/freelancers/~01b09490f0736f78e4?mp_source=share',
+    icon: WorkOutlineIcon,
+  },
   { name: 'Email', url: 'mailto:abdullahjabbar818@gmail.com', icon: EmailIcon },
 ];
 
