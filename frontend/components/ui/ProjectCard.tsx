@@ -19,7 +19,7 @@ interface ProjectCardProps {
   project: Project;
 }
 
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (

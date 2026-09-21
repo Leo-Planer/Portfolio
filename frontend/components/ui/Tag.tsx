@@ -9,7 +9,7 @@ interface TagProps {
   onClick?: () => void;
 }
 
-const MotionChip = motion(Chip);
+const MotionChip = motion.create(Chip);
 
 export default function Tag({ label, selected = false, onClick }: TagProps) {
   return (
