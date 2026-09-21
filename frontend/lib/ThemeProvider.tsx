@@ -3,7 +3,7 @@
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createAppTheme } from './theme';
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import { useState, useSyncExternalStore, createContext, useContext, ReactNode } from 'react';
 
 type ThemeMode = 'light' | 'dark';
 
@@ -20,20 +20,23 @@ const ThemeContext = createContext<ThemeContextType>({
 export const useThemeMode = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [mode, setMode] = useState<ThemeMode>('light');
-  const [mounted, setMounted] = useState(false);
+  const [mode, setMode] = useState<ThemeMode>(() => {
+    if (typeof window === 'undefined') {
+      return 'light';
+    }
 
-  useEffect(() => {
-    setMounted(true);
-    // Check localStorage first, then system preference
     const savedMode = localStorage.getItem('theme-mode') as ThemeMode | null;
     if (savedMode) {
-      setMode(savedMode);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setMode(prefersDark ? 'dark' : 'light');
+      return savedMode;
     }
-  }, []);
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   const toggleTheme = () => {
     const newMode = mode === 'light' ? 'dark' : 'light';
