@@ -76,7 +76,7 @@ export default function Home() {
                 fontSize: { xs: '1.5rem', md: '2rem' },
               }}
             >
-              Full Stack Developer
+              a Full Stack Web Engineer
             </Typography>
           </motion.div>
 

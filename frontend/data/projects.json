@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "title": "Week 10 Day 5 - Frontend Project",
+    "title": "AI Assignment Evaluator - AI Analysis",
     "slug": "week10-day5-frontend",
     "description": "Advanced frontend project showcasing modern React patterns and responsive design.",
     "longDescription": "A comprehensive frontend application built with Next.js and React, demonstrating advanced concepts including state management, API integration, and responsive UI design with modern best practices.",
@@ -23,7 +23,7 @@
   },
   {
     "id": "2",
-    "title": "Week 10 Day 3 - Frontend Project",
+    "title": "Smart Healthcare Store - Chatbot Integration",
     "slug": "week10-day3-frontend",
     "description": "Interactive web application with modern UI components and seamless user experience.",
     "longDescription": "A dynamic frontend project focusing on creating interactive user interfaces with React and implementing modern design patterns for enhanced user experience.",
@@ -45,7 +45,7 @@
   },
   {
     "id": "3",
-    "title": "Week 12 Day 5 - Full Stack Project",
+    "title": "Planer's Mint - BlockChain Project",
     "slug": "week12-day5-fullstack",
     "description": "Full-stack application demonstrating backend integration and data management.",
     "longDescription": "A complete full-stack application built with modern technologies, featuring both frontend and backend components with database integration and API development.",
@@ -67,8 +67,8 @@
   },
   {
     "id": "4",
-    "title": "Week 6 - Frontend Foundation",
-    "slug": "week6-frontend",
+    "title": "Shop.co - E-commerce Platform",
+    "slug": "shopping-store",
     "description": "Foundational frontend project focusing on core web development skills.",
     "longDescription": "An early-stage frontend project demonstrating proficiency in fundamental web technologies including HTML, CSS, and JavaScript with modern development practices.",
     "image": "/projects/week6-thumb.jpg",
@@ -85,6 +85,6 @@
       "CSS layout techniques",
       "JavaScript fundamentals"
     ],
-    "year": 2024
+    "year": 2025
   }
 ]

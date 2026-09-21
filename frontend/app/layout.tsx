@@ -14,12 +14,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Abdullah Jabbar - Full Stack Developer',
+    default: 'Abdullah Jabbar - Portfolio',
     template: '%s | Abdullah Jabbar',
   },
   description:
-    'Full Stack Developer specializing in React, Next.js, and Node.js. Building modern web applications with focus on performance and user experience.',
-  keywords: ['Full Stack Developer', 'React', 'Next.js', 'TypeScript', 'Web Development'],
+    'full stack web engineer specializing in React, Next.js, and Node.js. Building modern web applications with focus on performance and user experience.',
+  keywords: ['full stack web engineer', 'React', 'Next.js', 'TypeScript', 'Web Development'],
   authors: [{ name: 'Abdullah Jabbar' }],
   creator: 'Abdullah Jabbar',
   metadataBase: new URL('https://yourportfolio.com'),
@@ -27,15 +27,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://yourportfolio.com',
-    title: 'Abdullah Jabbar - Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, and Node.js.',
+    title: 'Abdullah Jabbar - full stack web engineer',
+    description: 'full stack web engineer specializing in React, Next.js, and Node.js.',
     siteName: 'Abdullah Jabbar Portfolio',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Abdullah Jabbar - Full Stack Developer',
-    description: 'Full Stack Developer specializing in React, Next.js, and Node.js.',
-    creator: '@AbdullahJa57382',
   },
   robots: {
     index: true,

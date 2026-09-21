@@ -10,10 +10,11 @@ import CodeIcon from '@mui/icons-material/Code';
 import StorageIcon from '@mui/icons-material/Storage';
 import BuildIcon from '@mui/icons-material/Build';
 import { Metadata } from 'next';
+import ContactButton from '@/components/ui/ContactButton';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about my skills, experience, and background as a full stack developer.',
+  description: 'Learn more about my skills, experience, and background as a full stack web engineer.',
 };
 
 const skills = [
@@ -66,7 +67,7 @@ export default function AboutPage() {
           About Me
         </Typography>
         <Typography variant="h6" color="text.secondary" sx={{ maxWidth: '700px', mx: 'auto' }}>
-          Passionate full stack developer with a focus on building exceptional digital experiences
+          Passionate full stack web engineer with a focus on building exceptional digital experiences
         </Typography>
       </Box>
 
@@ -84,7 +85,7 @@ export default function AboutPage() {
             Hello! I&apos;m Abdullah Jabbar
           </Typography>
           <Typography variant="body1" paragraph>
-            I&apos;m a full stack developer based in Pakistan, specializing in building modern web
+            I&apos;m a full stack web engineer based in Pakistan, specializing in building modern web
             applications with React, Next.js, and Node.js. I am passionate about creating
             exceptional digital experiences and have completed multiple projects demonstrating my
             skills in frontend and full-stack development.
@@ -207,9 +208,7 @@ export default function AboutPage() {
         <Typography variant="body1" color="text.secondary" paragraph>
           I&apos;m always open to discussing new projects and opportunities.
         </Typography>
-        <Button variant="contained" size="large" href="/contact">
-          Get In Touch
-        </Button>
+        <ContactButton />
       </Box>
     </Container>
   );
